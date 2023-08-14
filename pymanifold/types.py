@@ -89,11 +89,11 @@ class LiteMarket(DictDeserializable):
     closeTime: Optional[int]
     question: str
     # description: str
-    tags: List[str]
 
-    outcomeType: Literal["BINARY", "FREE_RESPONSE", "NUMERIC", "PSEUDO_NUMERIC", "MULTIPLE_CHOICE"]
-    pool: float | Mapping[str, float] | None
     isResolved: bool
+    outcomeType: Literal["BINARY", "FREE_RESPONSE", "NUMERIC", "PSEUDO_NUMERIC", "MULTIPLE_CHOICE"]
+    pool: Optional[float | Mapping[str, float] | None] = None
+    tags: Optional[List[str]] = None
     volume7Days: float | None = None
     volume24Hours: float | None = None
     description: str = ""
